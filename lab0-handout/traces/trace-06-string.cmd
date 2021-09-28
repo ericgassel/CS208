@@ -1,0 +1,33 @@
+# Test of truncated strings
+option fail 0
+option malloc 0
+new
+ih aardvark_bear_dolphin_gerbil_jaguar
+it meerkat_panda_squirrel_vulture_wolf
+rh aardvark_bear_dolphin_gerbil_jaguar
+rh meerkat_panda_squirrel_vulture_wolf
+it aardvark_bear_dolphin_gerbil_jaguar
+ih meerkat_panda_squirrel_vulture_wolf
+option length 30
+rh meerkat_panda_squirrel_vulture
+option length 28
+rh aardvark_bear_dolphin_gerbil
+it aardvark_bear_dolphin_gerbil_jaguar
+option length 21
+rh aardvark_bear_dolphin
+ih meerkat_panda_squirrel_vulture_wolf
+option length 22
+rh meerkat_panda_squirrel
+ih meerkat_panda_squirrel_vulture_wolf
+option length 7
+rh meerkat
+it aardvark_bear_dolphin_gerbil_jaguar
+option length 8
+rh aardvark
+it aardvark_bear_dolphin_gerbil_jaguar
+option length 100
+rh aardvark_bear_dolphin_gerbil_jaguar
+ih meerkat_panda_squirrel_vulture_wolf
+rh meerkat_panda_squirrel_vulture_wolf
+free
+quit
